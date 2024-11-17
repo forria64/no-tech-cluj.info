@@ -5,6 +5,16 @@
     font-style: normal;
 }
 
+/* Adjust line spacing for all paragraphs */
+p {
+    line-height: 1.6; /* Adjust this value as needed */
+    margin-bottom: 1em; /* Optional: Adds space below each paragraph */
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
 
 
 /* Footer Styles */
