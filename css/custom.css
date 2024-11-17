@@ -11,6 +11,11 @@ p {
     margin-bottom: 1em; /* Optional: Adds space below each paragraph */
 }
 
+.demands {
+    line-height: 1.6; /* Adjust this value as needed */
+    margin-bottom: 1em; /* Optional: Adds space below each paragraph */
+}
+
 
 html {
     scroll-behavior: smooth;
