@@ -107,6 +107,20 @@ text-decoration: none;
 color: #ffffff;
 }
 
+.copy-mail-link {
+text-decoration: none;
+color: #17B61B;
+}
+
+.copy-mail-link:hover {
+text-decoration: none;
+color: #ffffff;
+}
+
+.fallback {
+    position: absolute;
+    left: -9999px;
+}
 
 body {
     background-color: #000000;
