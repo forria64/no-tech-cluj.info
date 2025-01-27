@@ -16,16 +16,47 @@ p {
     margin-bottom: 1em; /* Optional: Adds space below each paragraph */
 }
 
-html,body {
+html, body {
     scroll-behavior: smooth;
--ms-overflow-style: none;  /* IE and Edge */
-scrollbar-width: none; /* Firefox */
+    height: 100%;  /* Ensure the body fills the viewport */
+    margin: 0;
 }
 
+/* Webkit browsers (Chrome, Safari, Opera) */
 ::-webkit-scrollbar {
-display: none; /* Chrome, Safari, Opera */
+    width: 12px;   /* Width of the scrollbar */
+    height: 12px;  /* Height of the horizontal scrollbar */
 }
 
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);  /* Transparent track */
+    border-radius: 10px;  /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb {
+    background: green;  /* Green slider */
+    border-radius: 10px;  /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: darkgreen;  /* Darker green on hover */
+}
+
+/* Firefox */
+html {
+    scrollbar-width: thin;  /* Thin scrollbar */
+    scrollbar-color: green rgba(0, 0, 0, 0.1);  /* Green thumb and transparent track */
+}
+
+/* For Edge (and other browsers supporting the same properties as Webkit) */
+body {
+    -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+}
+
+/* Hide scrollbar in general (including Edge) but maintain functionality */
+body::-webkit-scrollbar {
+    display: block;  /* Make sure Webkit scrollbars are visible */
+}
 
 
 /* Footer Styles */
@@ -54,13 +85,17 @@ display: none; /* Chrome, Safari, Opera */
     filter: brightness(1.5) contrast(1.5); /* Increase brightness by 20% */
 }
 
-
-
-
 /* Image Styling */
 .embedded-image {
     display: block;
     max-width: 100%;
+    height: auto;
+    margin: 20px auto; /* Center the image with top and bottom margins */
+}
+
+.embedded-image-bosch {
+    display: block;
+    max-width: 80%;
     height: auto;
     margin: 20px auto; /* Center the image with top and bottom margins */
 }
@@ -159,7 +194,7 @@ nav.menu ul {
     width: 100%;
     justify-content: flex-end;
     align-items: flex-end;
-    font-size: 25px;
+    font-size: 23px;
 }
 
 nav.menu ul li {
@@ -182,9 +217,9 @@ nav.menu ul li a:hover {
     transition: max-height 0.5s ease;
     background-color: #17B61B;
     position: absolute;
-    top: 40px;
+    top: 38px;
     left: 0;
-    padding: 10px;
+    padding: 12px;
     z-index: 10;
     list-style-type: none;
 }
